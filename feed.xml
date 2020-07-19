@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Bellioz Notes</title>
+    <link href="https://bellioz.github.io/feed.xml" rel="self" />
+    <link href="https://bellioz.github.io" />
+    <updated>1970-01-01T05:00:00+05:00</updated>
+    <author>
+        <name>Demetrius Bellioz</name>
+    </author>
+    <id>https://bellioz.github.io</id>
+
+    <entry>
+        <title>&quot;Псевдо ИИ&quot; на Python для Telegram чата</title>
+        <author>
+            <name>Demetrius Bellioz</name>
+        </author>
+        <link href="https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html"/>
+        <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
+            <category term="Python"/>
+
+        <updated>2020-07-19T20:19:32+05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />
+                    <p>У нас с друзьями есть групповой чат в Telegram. Дабы разнообразить наше общение, я решил написать бота который случайным образом пишет сообщения в чат. В основе своих сообщений бот использует <strong><span style="text-decoration: underline;"><a href="https://tproger.ru/translations/markov-chains/">цепь Маркова</a></span></strong> и историю сообщений чата.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />
+                <p>У нас с друзьями есть групповой чат в Telegram. Дабы разнообразить наше общение, я решил написать бота который случайным образом пишет сообщения в чат. В основе своих сообщений бот использует <strong><span style="text-decoration: underline;"><a href="https://tproger.ru/translations/markov-chains/">цепь Маркова</a></span></strong> и историю сообщений чата.</p>
+
+<p>Пример небольшого диалога с участием бота:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://bellioz.github.io/media/posts/1/1593339768906-3.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-xs.jpg 300w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-sm.jpg 480w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-md.jpg 768w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-lg.jpg 1024w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-xl.jpg 1360w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-2xl.jpg 1600w"  alt=""></figure>
+<h3 id="1-версия-python-и-используемые-библиотеки">1. Версия Python и используемые библиотеки</h3>
+<p><strong><span style="text-decoration: underline;"><a href="https://www.python.org/">Python 3.8.3</a></span></strong></p>
+<h6>Сторонние библиотеки:</h6>
+<p><strong><span style="text-decoration: underline;"><a href="https://github.com/eternnoir/pyTelegramBotAPI">pyTelegramBotAPI</a></span></strong> - Библиотека для работы с Telegram API.<br><strong><span style="text-decoration: underline;"><a href="https://github.com/jsvine/markovify">Markovify</a></span></strong> - Отвечает за алгоритм цепи Маркова.<br><strong><span style="text-decoration: underline;"><a href="https://github.com/Anorov/PySocks">PySocks</a></span></strong> - Библиотека для поддержки Socks5 прокси.</p>
+<p>Установка сторонних библиотек одной командой: <code>pip install pytelegrambotapi markovify pysocks</code></p>
+<h6>Стандартные библиотеки:</h6>
+<p><strong><span style="text-decoration: underline;"><a href="https://docs.python.org/3.8/library/re.html">Re</a></span></strong> - Для работы с регулярными выражениями.<br><strong><span style="text-decoration: underline;"><a href="https://docs.python.org/3.8/library/json.html">Json</a></span></strong> - Для работы с JSON.<br><strong><span style="text-decoration: underline;"><a href="https://docs.python.org/3.8/library/random.html">Random</a></span></strong> - Для генерации случайных чисел.</p>
+<h3 id="2-создание-бота-в-botfather-и-настройка">2. Создание бота в <span style="text-decoration: underline;"><strong><a href="https://t.me/BotFather">@Botfather</a></strong></span> и настройка</h3>
+<p>Как создать бота расписывать не буду, так как инструкций на эту тему в интернете полно. Например: <strong><span style="text-decoration: underline;"><a href="https://tlgrm.ru/docs/bots#botfather">https://tlgrm.ru/docs/bots#botfather</a></span></strong></p>
+<p><strong>Настройка:</strong><br>В <strong>config.json</strong> нужно прописать <strong>токен</strong> бота, <strong>ID чата</strong> и <strong>username</strong> вашего бота <strong>без @</strong>. ID чата можно узнать при помощи <strong><span style="text-decoration: underline;"><a href="https://t.me/myidbot">@myidbot</a></span></strong>, просто добавьте его в ваш чат и наберите команду <code>/getgroupid</code>.</p>
+<h3 id="3-структура-бота-и-команды">3. Структура бота и команды</h3>
+<p>Бот состоит из четырех файлов:<br><code>bot.py</code> - Код бота.<br><code>config.json</code> - Настройки бота.<br><code>phrases.txt</code> - История сообщений чата.<br><code>stopwords.txt</code> - База слов-исключений.</p>
+<p>Бот понимает всего две команды:<br><code>/stat</code> - Узнать кол-во уникальных слов в базе. Чем больше уникальных слов в базе, тем лучше и разнообразней будут генерироваться сообщения.<br><code>/set_level</code> - Установить уровень говорливости от 0 до 100. Например <code>/set_level 30</code>. Чем больше число, тем чаще бот будет писать в чат, чтобы отключить бота напишите <code>/set_level 0</code>.</p>
+<h3 id="4-краткое-описание-алгоритма">4. Краткое описание алгоритма</h3>
+<p>После того как вы настроили бота и добавили его в чат, первое время он будет молча сидеть и логировать сообщения в файл <code>phrases.txt</code>. Как только база сообщений пополнится достаточным количеством уникальных слов, бот напишет свое первое сгенерированное сообщение.</p>
+<p>Бот обрабатывает сообщения в зависимости от настроек <code>/set_level</code>. Например если <code>/set_level</code> равен 50, то бот будет обрабатывать каждое новое сообщение с вероятностью в 50% , если <code>/set_level</code> равен 100, то будет обрабатывать абсолютно каждое новое сообщение.</p>
+<p>При обработке нового сообщения бот разбивает его на отдельные слова, и формирует список из этих слов, кроме слов которые находятся в базе слов-исключений <code>stopwords.txt</code>. Затем из этого списка слов случайным образом выбирает одно слово, и составляет список предложений из истории чата <code>phrases.txt</code> которые содержат это слово. И уже на основе составленного списка предложений генерирует свое сообщение.</p>
+<h3 id="5-исходный-код">5. Исходный код</h3>
+<p>Доступен на <strong><span style="text-decoration: underline;"><a href="https://github.com/bellioz/Telegram-Markovbot">GitHub</a></span></strong></p>
+<p>P.S. Это мой учебный проект в процессе изучения Python.</p>
+            ]]>
+        </content>
+    </entry>
+</feed>

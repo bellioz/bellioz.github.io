@@ -18,7 +18,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-07-19T21:06:46+05:00</updated>
+        <updated>2020-07-19T22:40:55+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />
@@ -42,7 +42,8 @@
 <p><strong><span style="text-decoration: underline;"><a href="https://docs.python.org/3.8/library/re.html">Re</a></span></strong> - Для работы с регулярными выражениями.<br><strong><span style="text-decoration: underline;"><a href="https://docs.python.org/3.8/library/json.html">Json</a></span></strong> - Для работы с JSON.<br><strong><span style="text-decoration: underline;"><a href="https://docs.python.org/3.8/library/random.html">Random</a></span></strong> - Для генерации случайных чисел.</p>
 <h3 id="2-создание-бота-в-botfather-и-настройка">2. Создание бота в <span style="text-decoration: underline;"><strong><a href="https://t.me/BotFather">@Botfather</a></strong></span> и настройка</h3>
 <p>Как создать бота расписывать не буду, так как инструкций на эту тему в интернете полно. Например: <strong><span style="text-decoration: underline;"><a href="https://tlgrm.ru/docs/bots#botfather">https://tlgrm.ru/docs/bots#botfather</a></span></strong></p>
-<p><strong>Настройка:</strong><br>В <strong>config.json</strong> нужно прописать <strong>токен</strong> бота, <strong>ID чата</strong> и <strong>username</strong> вашего бота <strong>без @</strong>. ID чата можно узнать при помощи <strong><span style="text-decoration: underline;"><a href="https://t.me/myidbot">@myidbot</a></span></strong>, просто добавьте его в ваш чат и наберите команду <code>/getgroupid</code>.</p>
+<h6><strong>Настройка:</strong></h6>
+<p>В <strong>config.json</strong> нужно прописать <strong>токен</strong> бота, <strong>ID чата</strong> и <strong>username</strong> вашего бота <strong>без @</strong>. ID чата можно узнать при помощи <strong><span style="text-decoration: underline;"><a href="https://t.me/myidbot">@myidbot</a></span></strong>, просто добавьте его в ваш чат и наберите команду <code>/getgroupid</code>.</p>
 <h3 id="3-структура-бота-и-команды">3. Структура бота и команды</h3>
 <p>Бот состоит из четырех файлов:<br><code>bot.py</code> - Код бота.<br><code>config.json</code> - Настройки бота.<br><code>phrases.txt</code> - История сообщений чата.<br><code>stopwords.txt</code> - База слов-исключений.</p>
 <p>Бот понимает всего две команды:<br><code>/stat</code> - Узнать кол-во уникальных слов в базе. Чем больше уникальных слов в базе, тем лучше и разнообразней будут генерироваться сообщения.<br><code>/set_level</code> - Установить уровень говорливости от 0 до 100. Например <code>/set_level 30</code>. Чем больше число, тем чаще бот будет писать в чат, чтобы отключить бота напишите <code>/set_level 0</code>.</p>

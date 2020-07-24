@@ -18,7 +18,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-07-20T01:29:50+05:00</updated>
+        <updated>2020-07-24T18:45:28+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />
@@ -32,7 +32,9 @@
                 <p>У нас с друзьями есть групповой чат в Telegram. Дабы разнообразить наше общение, я решил написать бота который случайным образом пишет сообщения в чат. В основе своих сообщений бот использует <strong><span style="text-decoration: underline;"><a href="https://tproger.ru/translations/markov-chains/">цепь Маркова</a></span></strong> и историю сообщений чата.</p>
 
 <p>Пример небольшого диалога с участием бота:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://bellioz.github.io/media/posts/1/1593339768906-3.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-xs.jpg 300w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-sm.jpg 480w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-md.jpg 768w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-lg.jpg 1024w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-xl.jpg 1360w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-2xl.jpg 1600w"  alt=""></figure>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://bellioz.github.io/media/posts/1/1593339768906-3.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-xs.jpg 300w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-sm.jpg 480w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-md.jpg 768w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-lg.jpg 1024w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-xl.jpg 1360w ,https://bellioz.github.io/media/posts/1/responsive/1593339768906-3-2xl.jpg 1600w"  alt="Бот Пацанчик" width="300" height="198">
+<figcaption >Бот Пацанчик</figcaption>
+</figure>
 <h3 id="1-версия-python-и-используемые-библиотеки">1. Версия Python и используемые библиотеки</h3>
 <p><strong><span style="text-decoration: underline;"><a href="https://www.python.org/">Python 3.8.3</a></span></strong></p>
 <h6>Сторонние библиотеки:</h6>

@@ -10,6 +10,51 @@
     <id>https://bellioz.github.io</id>
 
     <entry>
+        <title>Запуск Python-скрипта в Tmux после перезагрузки Linux сервера</title>
+        <author>
+            <name>Demetrius Bellioz</name>
+        </author>
+        <link href="https://bellioz.github.io/zapusk-python-skripta-v-tmux-posle-perezagruzki-servera.html"/>
+        <id>https://bellioz.github.io/zapusk-python-skripta-v-tmux-posle-perezagruzki-servera.html</id>
+            <category term="Python"/>
+            <category term="Linux"/>
+
+        <updated>2020-09-22T14:28:59+05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://bellioz.github.io/media/posts/7/PythonLinux.jpg" alt="" />
+                    <p><strong>Задача:</strong> после перезагрузки сервера запустить терминал Tmux, и выполнить в нем Python-скрипт.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://bellioz.github.io/media/posts/7/PythonLinux.jpg" alt="" />
+                <p><strong>Задача:</strong> после перезагрузки сервера запустить терминал Tmux, и выполнить в нем Python-скрипт.</p>
+
+<p><strong>Нам понадобятся:</strong></p>
+<ol>
+<li><span style="text-decoration: underline;"><a href="#INTERNAL_LINK#/post/NaN" title="Командный интерпретатор Bash" target="_blank" rel="noopener noreferrer">Командный интерпретатор Bash</a></span></li>
+<li><span style="text-decoration: underline;"><a href="https://habr.com/ru/company/badoo/blog/468061/" title="Планировщик задач Cron" target="_blank" rel="noopener noreferrer">Планировщик задач Cron</a></span></li>
+</ol>
+<p><strong>Действия:</strong></p>
+<ol>
+<li>
+<p>Создадим Bash-скрипт с именем Start.sh, в котором пропишем команды запуска терминала Tmux с заданными параметрами. </p>
+<br><code>#!/bin/bash</code><br><code># Создаем новую сессию Tmux с именем MySession.</code><br><code>tmux new-session -d -s MySession</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Переходим в директорию где находится наш Python-скрипт.</code><br><code>tmux send-keys -t MySession "cd /home/Python" C-m</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Запускаем Python-скрипт с именем Script.py.</code><br><code>tmux send-keys -t MySession "python3 Script.py" C-m</code></li>
+<li>
+<p>Не забываем сделать наш Bash-скрипт исполняемым, в директории с файлом выполните команду:</p>
+<br><code>chmod +x Start.sh</code><br><br></li>
+<li>
+<p>Добавляем запуск нашего скрипта в автозагрузку:</p>
+<br>Открываем файл crontab при помощи команды <code>crontab -e</code>, и в самом конце добавляем строчку <code>@reboot /home/Python/Start.sh; exit</code></li>
+</ol>
+<p>Готово!</p>
+<p>P.S. <code>/home/Python</code> замените на свой путь.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
         <title>&quot;Псевдо ИИ&quot; на Python для Telegram чата</title>
         <author>
             <name>Demetrius Bellioz</name>
@@ -18,7 +63,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-09-22T12:37:29+05:00</updated>
+        <updated>2020-09-22T14:28:59+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />

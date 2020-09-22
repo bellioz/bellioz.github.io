@@ -19,7 +19,7 @@
             <category term="Python"/>
             <category term="Linux"/>
 
-        <updated>2020-09-22T14:40:17+05:00</updated>
+        <updated>2020-09-22T14:44:07+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/7/PythonLinux.jpg" alt="" />
@@ -50,7 +50,7 @@
 <br>Открываем файл crontab при помощи команды <code>crontab -e</code>, и в самом конце добавляем строчку <code>@reboot /home/Python/Start.sh; exit</code></li>
 </ol>
 <p>Готово! Теперь после каждой перезагрузки сервера будет запускаться наш скрипт Start.sh. Который в свою очередь будет запускать терминал Tmux, и передавать ему команды на запуск Python-скрипта.</p>
-<p>P.S. <code>/home/Python</code> замените на свой путь.</p>
+<p>P.S. Путь <code>/home/Python</code>, имя сессии <code>MySession</code>, и имя скрипта <code>Script.py</code> можете поменять на свои.</p>
             ]]>
         </content>
     </entry>
@@ -63,7 +63,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-09-22T14:40:17+05:00</updated>
+        <updated>2020-09-22T14:44:07+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />

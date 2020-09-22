@@ -14,7 +14,7 @@
             "url": "https://bellioz.github.io/zapusk-python-skripta-v-tmux-posle-perezagruzki-servera.html",
             "title": "Запуск Python-скрипта в Tmux после перезагрузки Linux сервера",
             "summary": "<p><strong>Задача:</strong> после перезагрузки сервера запустить терминал Tmux, и выполнить в нем Python-скрипт.</p>\n",
-            "content_html": "<p><strong>Задача:</strong> после перезагрузки сервера запустить терминал Tmux, и выполнить в нем Python-скрипт.</p>\n\n<p><strong>Нам понадобятся:</strong></p>\n<ol>\n<li><span style=\"text-decoration: underline;\"><a href=\"#INTERNAL_LINK#/post/NaN\" title=\"Командный интерпретатор Bash\" target=\"_blank\" rel=\"noopener noreferrer\">Командный интерпретатор Bash</a></span></li>\n<li><span style=\"text-decoration: underline;\"><a href=\"https://habr.com/ru/company/badoo/blog/468061/\" title=\"Планировщик задач Cron\" target=\"_blank\" rel=\"noopener noreferrer\">Планировщик задач Cron</a></span></li>\n</ol>\n<p><strong>Действия:</strong></p>\n<ol>\n<li>\n<p>Создадим Bash-скрипт с именем Start.sh, в котором пропишем команды запуска терминала Tmux с заданными параметрами. </p>\n<br><code>#!/bin/bash</code><br><code># Создаем новую сессию Tmux с именем MySession.</code><br><code>tmux new-session -d -s MySession</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Переходим в директорию где находится наш Python-скрипт.</code><br><code>tmux send-keys -t MySession \"cd /home/Python\" C-m</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Запускаем Python-скрипт с именем Script.py.</code><br><code>tmux send-keys -t MySession \"python3 Script.py\" C-m</code></li>\n<li>\n<p>Не забываем сделать наш Bash-скрипт исполняемым, в директории с файлом выполните команду:</p>\n<br><code>chmod +x Start.sh</code><br><br></li>\n<li>\n<p>Добавляем запуск нашего скрипта в автозагрузку:</p>\n<br>Открываем файл crontab при помощи команды <code>crontab -e</code>, и в самом конце добавляем строчку <code>@reboot /home/Python/Start.sh; exit</code></li>\n</ol>\n<p>Готово! Теперь после каждой перезагрузки сервера будет запускаться наш скрипт Start.sh. Который в свою очередь будет запускать терминал Tmux, и передавать ему команды на запуск Python-скрипта.</p>\n<p>P.S. <code>/home/Python</code> замените на свой путь.</p>",
+            "content_html": "<p><strong>Задача:</strong> после перезагрузки сервера запустить терминал Tmux, и выполнить в нем Python-скрипт.</p>\n\n<p><strong>Нам понадобятся:</strong></p>\n<ol>\n<li><span style=\"text-decoration: underline;\"><a href=\"#INTERNAL_LINK#/post/NaN\" title=\"Командный интерпретатор Bash\" target=\"_blank\" rel=\"noopener noreferrer\">Командный интерпретатор Bash</a></span></li>\n<li><span style=\"text-decoration: underline;\"><a href=\"https://habr.com/ru/company/badoo/blog/468061/\" title=\"Планировщик задач Cron\" target=\"_blank\" rel=\"noopener noreferrer\">Планировщик задач Cron</a></span></li>\n</ol>\n<p><strong>Действия:</strong></p>\n<ol>\n<li>\n<p>Создадим Bash-скрипт с именем Start.sh, в котором пропишем команды запуска терминала Tmux с заданными параметрами. </p>\n<br><code>#!/bin/bash</code><br><code># Создаем новую сессию Tmux с именем MySession.</code><br><code>tmux new-session -d -s MySession</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Переходим в директорию где находится наш Python-скрипт.</code><br><code>tmux send-keys -t MySession \"cd /home/Python\" C-m</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Запускаем Python-скрипт с именем Script.py.</code><br><code>tmux send-keys -t MySession \"python3 Script.py\" C-m</code></li>\n<li>\n<p>Не забываем сделать наш Bash-скрипт исполняемым, в директории с файлом выполните команду:</p>\n<br><code>chmod +x Start.sh</code><br><br></li>\n<li>\n<p>Добавляем запуск нашего скрипта в автозагрузку:</p>\n<br>Открываем файл crontab при помощи команды <code>crontab -e</code>, и в самом конце добавляем строчку <code>@reboot /home/Python/Start.sh; exit</code></li>\n</ol>\n<p>Готово! Теперь после каждой перезагрузки сервера будет запускаться наш скрипт Start.sh. Который в свою очередь будет запускать терминал Tmux, и передавать ему команды на запуск Python-скрипта.</p>\n<p>P.S. Путь <code>/home/Python</code>, имя сессии <code>MySession</code>, и имя скрипта <code>Script.py</code> можете поменять на свои.</p>",
             "image": "https://bellioz.github.io/media/posts/7/PythonLinux.jpg",
             "author": {
                 "name": "Demetrius Bellioz"
@@ -23,8 +23,8 @@
                    "Python",
                    "Linux"
             ],
-            "date_published": "2020-09-22T14:40:17+05:00",
-            "date_modified": "2020-09-22T14:40:17+05:00"
+            "date_published": "2020-09-22T14:44:07+05:00",
+            "date_modified": "2020-09-22T14:44:07+05:00"
         },
         {
             "id": "https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html",
@@ -39,8 +39,8 @@
             "tags": [
                    "Python"
             ],
-            "date_published": "2020-09-22T14:40:17+05:00",
-            "date_modified": "2020-09-22T14:40:17+05:00"
+            "date_published": "2020-09-22T14:44:07+05:00",
+            "date_modified": "2020-09-22T14:44:07+05:00"
         }
     ]
 }

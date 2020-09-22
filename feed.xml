@@ -19,7 +19,7 @@
             <category term="Python"/>
             <category term="Linux"/>
 
-        <updated>2020-09-22T14:44:07+05:00</updated>
+        <updated>2020-09-22T14:54:31+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/7/PythonLinux.jpg" alt="" />
@@ -44,7 +44,7 @@
 <br><code>#!/bin/bash</code><br><code># Создаем новую сессию Tmux с именем MySession.</code><br><code>tmux new-session -d -s MySession</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Переходим в директорию где находится наш Python-скрипт.</code><br><code>tmux send-keys -t MySession "cd /home/Python" C-m</code><br><code># Тайм-аут 10 секунд.</code><br><code>sleep 10</code><br><code># Запускаем Python-скрипт с именем Script.py.</code><br><code>tmux send-keys -t MySession "python3 Script.py" C-m</code></li>
 <li>
 <p>Не забываем сделать наш Bash-скрипт исполняемым, в директории с файлом выполните команду:</p>
-<br><code>chmod +x Start.sh</code><br><br></li>
+<br><code>chmod +x Start.sh</code></li>
 <li>
 <p>Добавляем запуск нашего скрипта в автозагрузку:</p>
 <br>Открываем файл crontab при помощи команды <code>crontab -e</code>, и в самом конце добавляем строчку <code>@reboot /home/Python/Start.sh; exit</code></li>
@@ -63,7 +63,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-09-22T14:44:07+05:00</updated>
+        <updated>2020-09-22T14:54:31+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />

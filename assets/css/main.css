@@ -1,41 +1,4 @@
 @charset "UTF-8";
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-article,
-aside,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
-  display: block;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: top;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
 :root {
   --main-col-width: 50rem;
   --sidebar-width: 18rem;
@@ -103,6 +66,43 @@ textarea {
 
 .whatsapp {
   background: #25D366;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 html {
@@ -741,6 +741,13 @@ textarea {
   }
 }
 
+@media all and (min-width: 56.25em) {
+  .pagination {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+}
+
 .sidebar {
   padding: 2.4285714286rem 0 2.4285714286rem;
 }
@@ -793,6 +800,12 @@ textarea {
 @media screen and (min-width: 75rem) {
   .l-grid--1col .c-card .c-card__title {
     font-size: 1.6758293408rem;
+  }
+}
+@media all and (min-width: 56.25em) {
+  .l-grid--1col .pagination {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
   }
 }
 .l-grid--2col {
@@ -1451,8 +1464,10 @@ textarea {
 
 .box {
   border-top: 1px solid var(--border-color-light);
+  border-bottom: none !important;
   margin-top: 2.4285714286rem;
   padding-top: 1.9428571429rem;
+  padding-bottom: 0 !important;
 }
 .sidebar .box:first-child {
   border-top: none;
@@ -1828,6 +1843,17 @@ textarea {
 }
 .u-author__name {
   margin: 0;
+}
+.u-author__website {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.u-author__website a {
+  margin-left: 0.4rem;
 }
 
 .u-tag {

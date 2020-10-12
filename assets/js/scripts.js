@@ -98,6 +98,8 @@ window.addEventListener('scroll', function (e) {
             initMobileMenuSidebar();
         }
 
+        initClosingMenuOnClickLink();
+
         if (!config.isHoverMenu) {
             initAriaAttributes();
         }
@@ -351,6 +353,7 @@ window.addEventListener('scroll', function (e) {
                             this.setAttribute('data-last-click', currentTime);
                         } else if (lastClick + config.doubleClickTime > currentTime) {
                             e.stopPropagation();
+                            closeMenu(this, true);
                         }
                     });
                 }
@@ -377,6 +380,57 @@ window.addEventListener('scroll', function (e) {
                 ariaElement.setAttribute('aria-hidden', 'true');
                 ariaElement.parentNode.firstElementChild.setAttribute('aria-expanded', false);
             }
+        }
+    }
+
+    /**
+     * Close menu on click link
+     */
+    function initClosingMenuOnClickLink () {
+        var links = document.querySelectorAll(config.menuSelector + ' a');
+
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].parentNode.classList.contains(config.parentItemClass)) {
+                continue;
+            }
+
+            links[i].addEventListener('click', function (e) {
+                closeMenu(this, false);
+            });
+        }
+    }
+
+    /**
+     * Close menu
+     */
+    function closeMenu (clickedLink, forceClose) {
+        if (forceClose === false) {
+            if (clickedLink.parentNode.classList.contains(config.parentItemClass)) {
+                return;
+            }
+        }
+
+        var relatedContainer = document.querySelector(config.relatedContainerForOverlayMenuSelector);
+        var button = document.querySelector(config.buttonSelector);
+        var menuWrapper = document.querySelector('.' + config.mobileMenuOverlayClass);
+
+        if (!menuWrapper) {
+            menuWrapper = document.querySelector('.' + config.mobileMenuSidebarClass);
+        }
+
+        menuWrapper.classList.add(config.hiddenElementClass);
+        button.classList.remove(config.openedMenuClass);
+        button.setAttribute(config.ariaButtonAttribute, false);
+        document.documentElement.classList.remove(config.noScrollClass);
+
+        if (relatedContainer) {
+            relatedContainer.classList.remove(config.relatedContainerForOverlayMenuClass);
+        }
+
+        var menuOverlay = document.querySelector('.' + config.mobileMenuSidebarOverlayClass);
+
+        if (menuOverlay) {
+            menuOverlay.classList.add(config.hiddenElementClass);
         }
     }
 

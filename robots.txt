@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bellioz.github.io/sitemap.xml

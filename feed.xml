@@ -3,7 +3,7 @@
     <title>Bellioz Notes</title>
     <link href="https://bellioz.github.io/feed.xml" rel="self" />
     <link href="https://bellioz.github.io" />
-    <updated>2020-11-12T11:28:03+05:00</updated>
+    <updated>2020-11-12T13:39:23+05:00</updated>
     <author>
         <name>Demetrius Bellioz</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://bellioz.github.io/nastroyka-sublime-text-3-dlya-python.html</id>
             <category term="Python"/>
 
-        <updated>2020-11-12T11:28:03+05:00</updated>
+        <updated>2020-11-12T13:39:23+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/9/sublime_text-2.jpg" alt="Sublime Text 3" />
@@ -58,7 +58,7 @@
 <figure class="post__image post__image--center" ><img loading="lazy" src="https://bellioz.github.io/media/posts/9/image-20201112093100866.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://bellioz.github.io/media/posts/9/responsive/image-20201112093100866-xs.png 300w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112093100866-sm.png 480w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112093100866-md.png 768w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112093100866-lg.png 1024w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112093100866-xl.png 1360w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112093100866-2xl.png 1600w"  alt="Настройка плагина Anaconda" width="701" height="162">
 <figcaption >Настройка плагина Anaconda</figcaption>
 </figure>
-<p><span class="md-meta-i-c md-link md-expand"><a spellcheck="false" href="https://packagecontrol.io/packages/Terminal"><span class="md-plain">2.</span></a></span><strong><span class="md-meta-i-c md-link md-expand"><a spellcheck="false" href="https://packagecontrol.io/packages/Terminal"><span class="md-plain"> Terminal</span></a></span></strong><span class="md-plain"> - плагин для быстрого запуска терминала в директории с текущим проектом сочетанием клавиш </span><strong><span class="md-pair-s "><em><span class="md-plain">Ctrl+Shift+T</span></em></span></strong><span class="md-plain md-expand">, либо правой кнопкой мыши в рабочем окне или боковой панели.</span></p>
+<p><span class="md-meta-i-c md-link md-expand"><a spellcheck="false" href="https://packagecontrol.io/packages/Terminal"><span class="md-plain">2.</span></a></span><strong><span class="md-meta-i-c md-link md-expand"><a spellcheck="false" href="https://packagecontrol.io/packages/Terminal"><span class="md-plain"> Terminal</span></a></span></strong><span class="md-plain"> - плагин для быстрого запуска терминала в директории с текущим проектом сочетанием клавиш </span><strong><span class="md-pair-s "><em><span class="md-plain">Ctrl+Shift+T</span></em></span></strong><span class="md-plain md-expand">, либо кликом правой кнопкой мыши в рабочем окне или боковой панели.</span></p>
 <figure class="post__image post__image--center" ><img loading="lazy" src="https://bellioz.github.io/media/posts/9/image-20201112094924144-2.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://bellioz.github.io/media/posts/9/responsive/image-20201112094924144-2-xs.png 300w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112094924144-2-sm.png 480w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112094924144-2-md.png 768w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112094924144-2-lg.png 1024w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112094924144-2-xl.png 1360w ,https://bellioz.github.io/media/posts/9/responsive/image-20201112094924144-2-2xl.png 1600w"  alt="Плагин Terminal для Sublime Text 3" width="303" height="345">
 <figcaption >Плагин Terminal для Sublime Text 3</figcaption>
 </figure>

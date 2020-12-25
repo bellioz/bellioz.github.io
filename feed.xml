@@ -3,7 +3,7 @@
     <title>Bellioz Notes</title>
     <link href="https://bellioz.github.io/feed.xml" rel="self" />
     <link href="https://bellioz.github.io" />
-    <updated>2020-12-25T11:32:31+05:00</updated>
+    <updated>2020-12-25T11:33:01+05:00</updated>
     <author>
         <name>Demetrius Bellioz</name>
     </author>
@@ -125,7 +125,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-12-25T11:32:31+05:00</updated>
+        <updated>2020-12-25T11:33:01+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />
@@ -163,7 +163,7 @@
 <li><span style="text-decoration: underline;"><a href="https://www.nltk.org/" target="_blank" rel="noopener noreferrer">Nltk</a></span></li>
 <li><span style="text-decoration: underline;"><a href="https://docs.python.org/3/library/configparser.html" target="_blank" rel="noopener noreferrer">Configparser</a></span></li>
 </ul>
-<p><a href="https://github.com/bellioz/Telegram-Markovbot" target="_blank" rel="noopener noreferrer">Исходный код на GitHub</a></p>
+<p><strong><span style="text-decoration: underline;"><a href="https://github.com/bellioz/Telegram-Markovbot" target="_blank" rel="noopener noreferrer">Исходный код на GitHub</a></span></strong></p>
             ]]>
         </content>
     </entry>

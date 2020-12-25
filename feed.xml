@@ -3,7 +3,7 @@
     <title>Bellioz Notes</title>
     <link href="https://bellioz.github.io/feed.xml" rel="self" />
     <link href="https://bellioz.github.io" />
-    <updated>2020-12-25T11:30:51+05:00</updated>
+    <updated>2020-12-25T11:32:31+05:00</updated>
     <author>
         <name>Demetrius Bellioz</name>
     </author>
@@ -125,7 +125,7 @@
         <id>https://bellioz.github.io/psevdo-ii-na-python-dlya-telegram-chata.html</id>
             <category term="Python"/>
 
-        <updated>2020-12-25T11:30:51+05:00</updated>
+        <updated>2020-12-25T11:32:31+05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://bellioz.github.io/media/posts/1/nPewceRPvXY-2.jpg" alt="" />
@@ -157,7 +157,7 @@
 <p>При добавлений бота в чат, создаются файлы лога <strong>(logs/ID_чата.log)</strong> и настроек этого чата <strong>(configs/ID_чата.cfg)</strong>. Если по какой-то причине этого не произошло, то можно воспользоваться командой <code>/reset</code>. Эта команда доступна только администраторам чата.</p>
 <h2 class="align-center">Версия Python и используемые библиотеки</h2>
 <ul>
-<li><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python 3.9.1</a></li>
+<li><span style="text-decoration: underline;"><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python 3.9.1</a></span></li>
 <li><span style="text-decoration: underline;"><a href="https://github.com/aiogram/aiogram" target="_blank" rel="noopener noreferrer">Aiogram</a></span></li>
 <li><span style="text-decoration: underline;"><a href="https://github.com/jsvine/markovify" target="_blank" rel="noopener noreferrer">Markovify</a></span></li>
 <li><span style="text-decoration: underline;"><a href="https://www.nltk.org/" target="_blank" rel="noopener noreferrer">Nltk</a></span></li>

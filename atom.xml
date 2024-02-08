@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bellioz.github.io</id>
+    <title>Bellioz Notes</title>
+    <updated>2024-02-08T19:46:03.496Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://bellioz.github.io"/>
+    <link rel="self" href="https://bellioz.github.io/atom.xml"/>
+    <subtitle>Bellioz Notes</subtitle>
+    <logo>https://bellioz.github.io/images/avatar.png</logo>
+    <icon>https://bellioz.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Bellioz Notes</rights>
+    <entry>
+        <title type="html"><![CDATA[Установка и настройка Fail2ban]]></title>
+        <id>https://bellioz.github.io/post/ustanovka-i-nastroyka-fail2ban/</id>
+        <link href="https://bellioz.github.io/post/ustanovka-i-nastroyka-fail2ban/">
+        </link>
+        <updated>2023-12-04T04:02:43.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="https://bellioz.github.io/post-images/1707421077107.jpg" alt="" loading="lazy"><br>
+Fail2ban анализирует логи служб, работающих на сервере, и при обнаружении подозрительной активности блокирует IP-адреса возможных злоумышленников.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://bellioz.github.io/post-images/1707421077107.jpg" alt="" loading="lazy"><br>
+Fail2ban анализирует логи служб, работающих на сервере, и при обнаружении подозрительной активности блокирует IP-адреса возможных злоумышленников.</p>
+<!-- more -->
+<h1 id="установка">Установка</h1>
+<p><code>sudo apt update</code><br>
+<code>sudo apt install fail2ban -y</code></p>
+<h1 id="добавление-в-автозагрузку">Добавление в автозагрузку</h1>
+<p><code>sudo systemctl enable fail2ban</code></p>
+<h1 id="настройка">Настройка</h1>
+<p>Настройки хранятся в конфигурационном файле: <code>/etc/fail2ban/jail.conf </code><br>
+Рекомендуется вносить свои настройки в файл <code>jail.local</code>, разместив его в той же директории.</p>
+<h4 id="создание-файла-jaillocal">Создание файла jail.local:</h4>
+<p><code>sudo touch /etc/fail2ban/jail.local</code></p>
+<h4 id="открываем-файл-jaillocal-и-прописываем-настройки">Открываем файл jail.local и прописываем настройки:</h4>
+<p><code>sudo nano /etc/fail2ban/jail.local</code></p>
+<h5 id="пример-настроек">Пример настроек:</h5>
+<p><code>[DEFAULT]</code><br>
+<code>ignoreip = 127.0.0.1</code><br>
+<code>[sshd]</code><br>
+<code>enabled  = true</code><br>
+<code>findtime = 86400</code><br>
+<code>maxretry = 3</code><br>
+<code>bantime = 86400</code></p>
+<p><code>ignoreip</code> - Белый список IP-адресов, которые не будут блокироваться, указываются через пробел.<br>
+<code>[sshd]</code> - Указание службы для которой применяются настройки.<br>
+<code>enabled</code> - Включение (<code>true</code>) или отключение (<code>false</code>) работы Fail2ban с данной службой.<br>
+<code>findtime</code> - Период времени (секунды), в течении которого регистрируются неудачные попытки авторизации.<br>
+<code>maxretry</code> - Количество неудачных попыток авторизации.<br>
+<code>bantime</code> - Продолжителность бана IP-адреса (секунды).</p>
+<h4 id="после-сохранения-настроек-перезапускаем-fail2ban">После сохранения настроек перезапускаем Fail2ban:</h4>
+<p><code>sudo systemctl restart fail2ban.service</code></p>
+<h4 id="просмотр-логов-fail2ban">Просмотр логов Fail2ban:</h4>
+<p><code>sudo tail /var/log/fail2ban.log</code></p>
+]]></content>
+    </entry>
+</feed>
